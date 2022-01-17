@@ -22,6 +22,7 @@ class MainViewModel: ObservableObject {
   init() {
     manager = DNSProxyManager()
     manager.delegate = self
+    requestsBlocked = UserDefaults.standard.integer(forKey: StoreKey.numberOfRequestsBlocked.rawValue)
   }
 
   func toggleProxy() {
