@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct DNSProxyApp: App {
+struct AdNetApp: App {
   
   @StateObject var mainViewModel = MainViewModel()
 

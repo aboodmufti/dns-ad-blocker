@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0813B80227703E7700C3B558 /* DNSProxyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813B80127703E7700C3B558 /* DNSProxyApp.swift */; };
+		0813B80227703E7700C3B558 /* AdNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813B80127703E7700C3B558 /* AdNet.swift */; };
 		0813B80427703E7700C3B558 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813B80327703E7700C3B558 /* MainView.swift */; };
 		0813B80627703E7A00C3B558 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0813B80527703E7A00C3B558 /* Assets.xcassets */; };
 		0813B80927703E7A00C3B558 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0813B80827703E7A00C3B558 /* Preview Assets.xcassets */; };
@@ -72,11 +72,11 @@
 
 /* Begin PBXFileReference section */
 		0813B7FE27703E7700C3B558 /* AdNet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdNet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0813B80127703E7700C3B558 /* DNSProxyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyApp.swift; sourceTree = "<group>"; };
+		0813B80127703E7700C3B558 /* AdNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdNet.swift; sourceTree = "<group>"; };
 		0813B80327703E7700C3B558 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		0813B80527703E7A00C3B558 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0813B80827703E7A00C3B558 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0813B80A27703E7A00C3B558 /* DNSProxy.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNSProxy.entitlements; sourceTree = "<group>"; };
+		0813B80A27703E7A00C3B558 /* AdNet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AdNet.entitlements; sourceTree = "<group>"; };
 		0813B81427703EC600C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension */ = {isa = PBXFileReference; explicitFileType = "wrapper.system-extension"; includeInIndex = 0; path = com.aboodmufti.dnsproxy.extension.systemextension; sourceTree = BUILT_PRODUCTS_DIR; };
 		0813B81627703EC600C3B558 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 		0813B81927703EC600C3B558 /* DNSProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyProvider.swift; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 			children = (
 				083D3A19277042CD00C09E2B /* Packages */,
 				08E6F544278E296D005D0FB3 /* Shared */,
-				0813B80027703E7700C3B558 /* DNSProxy */,
+				0813B80027703E7700C3B558 /* AdNet */,
 				0813B81827703EC600C3B558 /* DNSProviderExtension */,
 				0813B81527703EC600C3B558 /* Frameworks */,
 				0813B7FF27703E7700C3B558 /* Products */,
@@ -152,7 +152,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0813B80027703E7700C3B558 /* DNSProxy */ = {
+		0813B80027703E7700C3B558 /* AdNet */ = {
 			isa = PBXGroup;
 			children = (
 				08E6F5712794CC47005D0FB3 /* Models */,
@@ -160,12 +160,12 @@
 				08E6F55327911CEB005D0FB3 /* Componenets */,
 				08E6F5702794CC27005D0FB3 /* ViewModels */,
 				08E6F55627911D3E005D0FB3 /* Util */,
-				0813B80127703E7700C3B558 /* DNSProxyApp.swift */,
+				0813B80127703E7700C3B558 /* AdNet.swift */,
 				0813B80527703E7A00C3B558 /* Assets.xcassets */,
-				0813B80A27703E7A00C3B558 /* DNSProxy.entitlements */,
+				0813B80A27703E7A00C3B558 /* AdNet.entitlements */,
 				0813B80727703E7A00C3B558 /* Preview Content */,
 			);
-			path = DNSProxy;
+			path = AdNet;
 			sourceTree = "<group>";
 		};
 		0813B80727703E7A00C3B558 /* Preview Content */ = {
@@ -383,7 +383,7 @@
 				0813B80427703E7700C3B558 /* MainView.swift in Sources */,
 				08E6F57B2794DF21005D0FB3 /* BlockListViewModel.swift in Sources */,
 				08E6F561279362D7005D0FB3 /* GeneralView.swift in Sources */,
-				0813B80227703E7700C3B558 /* DNSProxyApp.swift in Sources */,
+				0813B80227703E7700C3B558 /* AdNet.swift in Sources */,
 				08E6F54F278E5F63005D0FB3 /* GlobalVariables.swift in Sources */,
 				08E6F5732794CE84005D0FB3 /* StoreKeys.swift in Sources */,
 				08E6F55827911D97005D0FB3 /* ControlCell.swift in Sources */,
@@ -549,12 +549,12 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DNSProxy/DNSProxy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AdNet/AdNet.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DNSProxy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AdNet/Preview Content\"";
 				DEVELOPMENT_TEAM = 9246X952CV;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
@@ -579,11 +579,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = DNSProxy/DNSProxy.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AdNet/AdNet.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"DNSProxy/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"AdNet/Preview Content\"";
 				DEVELOPMENT_TEAM = 9246X952CV;
 				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
