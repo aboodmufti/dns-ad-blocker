@@ -15,10 +15,9 @@
 		0813B81A27703EC600C3B558 /* DNSProxyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813B81927703EC600C3B558 /* DNSProxyProvider.swift */; };
 		0813B81C27703EC700C3B558 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0813B81B27703EC600C3B558 /* main.swift */; };
 		0813B82127703EC700C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 0813B81427703EC600C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		085247C4278951BA0003FBE2 /* DNS in Frameworks */ = {isa = PBXBuildFile; productRef = 085247C3278951BA0003FBE2 /* DNS */; };
-		085247C6278951C20003FBE2 /* DNS in Frameworks */ = {isa = PBXBuildFile; productRef = 085247C5278951C20003FBE2 /* DNS */; };
 		085CEB72278D2BB9002A610B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CEB71278D2BB9002A610B /* Logging.swift */; };
 		085CEB74278D313A002A610B /* FlowHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CEB73278D313A002A610B /* FlowHandler.swift */; };
+		0888B35D27963D7300D688CB /* DNS in Frameworks */ = {isa = PBXBuildFile; productRef = 0888B35C27963D7300D688CB /* DNS */; };
 		08E6F541278E2886005D0FB3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6F540278E2886005D0FB3 /* MainViewModel.swift */; };
 		08E6F543278E28C9005D0FB3 /* DNSProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6F542278E28C9005D0FB3 /* DNSProxyManager.swift */; };
 		08E6F546278E2EB8005D0FB3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6F545278E2EB8005D0FB3 /* Logger.swift */; };
@@ -83,7 +82,6 @@
 		0813B81B27703EC600C3B558 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		0813B81D27703EC700C3B558 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0813B81E27703EC700C3B558 /* DNSProviderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNSProviderExtension.entitlements; sourceTree = "<group>"; };
-		083D3A1A277042CD00C09E2B /* DNS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = DNS; path = ../../DNS; sourceTree = "<group>"; };
 		085CEB71278D2BB9002A610B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		085CEB73278D313A002A610B /* FlowHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowHandler.swift; sourceTree = "<group>"; };
 		08E6F540278E2886005D0FB3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -115,7 +113,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				085247C4278951BA0003FBE2 /* DNS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				085247C6278951C20003FBE2 /* DNS in Frameworks */,
+				0888B35D27963D7300D688CB /* DNS in Frameworks */,
 				0813B81727703EC600C3B558 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,7 +203,6 @@
 		083D3A19277042CD00C09E2B /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				083D3A1A277042CD00C09E2B /* DNS */,
 			);
 			name = Packages;
 			sourceTree = "<group>";
@@ -289,7 +285,6 @@
 			);
 			name = AdNet;
 			packageProductDependencies = (
-				085247C3278951BA0003FBE2 /* DNS */,
 			);
 			productName = DNSProxy;
 			productReference = 0813B7FE27703E7700C3B558 /* AdNet.app */;
@@ -309,7 +304,7 @@
 			);
 			name = DNSProviderExtension;
 			packageProductDependencies = (
-				085247C5278951C20003FBE2 /* DNS */,
+				0888B35C27963D7300D688CB /* DNS */,
 			);
 			productName = DNSProviderExtension;
 			productReference = 0813B81427703EC600C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension */;
@@ -342,6 +337,9 @@
 				Base,
 			);
 			mainGroup = 0813B7F527703E7700C3B558;
+			packageReferences = (
+				0888B35B27963D7300D688CB /* XCRemoteSwiftPackageReference "dns" */,
+			);
 			productRefGroup = 0813B7FF27703E7700C3B558 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -693,13 +691,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCSwiftPackageProductDependency section */
-		085247C3278951BA0003FBE2 /* DNS */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = DNS;
+/* Begin XCRemoteSwiftPackageReference section */
+		0888B35B27963D7300D688CB /* XCRemoteSwiftPackageReference "dns" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bouke/dns";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
 		};
-		085247C5278951C20003FBE2 /* DNS */ = {
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0888B35C27963D7300D688CB /* DNS */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = 0888B35B27963D7300D688CB /* XCRemoteSwiftPackageReference "dns" */;
 			productName = DNS;
 		};
 /* End XCSwiftPackageProductDependency section */
