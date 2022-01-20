@@ -31,4 +31,10 @@ enum BlockList: String, CaseIterable {
       return "github.com/jerryn70/GoodbyeAds"
     }
   }
+
+  static var defaultLists: [String: Bool] {
+    var lists = BlockList.allCases.reduce(into: [String: Bool]()) { $0[$1.rawValue] = false }
+    lists[BlockList.oisd.rawValue] = true
+    return lists
+  }
 }

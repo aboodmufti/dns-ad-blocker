@@ -7,6 +7,11 @@ struct AdNetApp: App {
 
   init() {
     log = AppLogger(.verbose)
+
+    if Store.shared.dictionary(.selectedBlockLists) == nil {
+      Store.shared.set(BlockList.defaultLists, .selectedBlockLists)
+    }
+    
   }
 
   var body: some Scene {
