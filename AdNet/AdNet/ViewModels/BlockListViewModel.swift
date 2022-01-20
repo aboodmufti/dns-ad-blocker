@@ -5,8 +5,13 @@ class BlockListViewModel: ObservableObject {
   var originalSelectedList: [String: Bool]?
 
   @Published var selectedLists: [String: Bool] = {
-    let stored = UserDefaults.standard.dictionary(forKey: StoreKey.selectedBlockLists.rawValue) as? [String: Bool]
-    return stored ?? BlockList.allCases.reduce(into: [String: Bool]()) { $0[$1.rawValue] = false }
+    if let stored = Store.shared.dictionary(.selectedBlockLists) {
+      return stored
+    }
+
+    var defaultList = BlockList.allCases.reduce(into: [String: Bool]()) { $0[$1.rawValue] = false }
+    defaultList[BlockList.oisd.rawValue] = true
+    return defaultList
   }()
 
   private var isChanged_: Bool {
@@ -26,7 +31,7 @@ class BlockListViewModel: ObservableObject {
   }
 
   func save() {
-    UserDefaults.standard.set(selectedLists, forKey: StoreKey.selectedBlockLists.rawValue)
+    Store.shared.set(selectedLists, .selectedBlockLists)
     originalSelectedList = nil
     isChanged = isChanged_
 

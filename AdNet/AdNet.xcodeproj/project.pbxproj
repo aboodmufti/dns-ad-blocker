@@ -17,6 +17,7 @@
 		0813B82127703EC700C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension in Embed System Extensions */ = {isa = PBXBuildFile; fileRef = 0813B81427703EC600C3B558 /* com.aboodmufti.dnsproxy.extension.systemextension */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		085CEB72278D2BB9002A610B /* Logging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CEB71278D2BB9002A610B /* Logging.swift */; };
 		085CEB74278D313A002A610B /* FlowHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085CEB73278D313A002A610B /* FlowHandler.swift */; };
+		08768FC4279908480092B650 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08768FC3279908480092B650 /* Store.swift */; };
 		0888B35D27963D7300D688CB /* DNS in Frameworks */ = {isa = PBXBuildFile; productRef = 0888B35C27963D7300D688CB /* DNS */; };
 		08E6F541278E2886005D0FB3 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6F540278E2886005D0FB3 /* MainViewModel.swift */; };
 		08E6F543278E28C9005D0FB3 /* DNSProxyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E6F542278E28C9005D0FB3 /* DNSProxyManager.swift */; };
@@ -84,6 +85,7 @@
 		0813B81E27703EC700C3B558 /* DNSProviderExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DNSProviderExtension.entitlements; sourceTree = "<group>"; };
 		085CEB71278D2BB9002A610B /* Logging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logging.swift; sourceTree = "<group>"; };
 		085CEB73278D313A002A610B /* FlowHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowHandler.swift; sourceTree = "<group>"; };
+		08768FC3279908480092B650 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		08E6F540278E2886005D0FB3 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		08E6F542278E28C9005D0FB3 /* DNSProxyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DNSProxyManager.swift; sourceTree = "<group>"; };
 		08E6F545278E2EB8005D0FB3 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				08E6F542278E28C9005D0FB3 /* DNSProxyManager.swift */,
 				08E6F548278E2F3B005D0FB3 /* Logging.swift */,
 				08E6F5762794D531005D0FB3 /* IPCConnectionApp.swift */,
+				08768FC3279908480092B650 /* Store.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				08E6F543278E28C9005D0FB3 /* DNSProxyManager.swift in Sources */,
 				08E6F55527911D1D005D0FB3 /* ButtonCell.swift in Sources */,
 				08E6F541278E2886005D0FB3 /* MainViewModel.swift in Sources */,
+				08768FC4279908480092B650 /* Store.swift in Sources */,
 				08E6F56D2794C87E005D0FB3 /* BlockListView.swift in Sources */,
 				08E6F55C27911DD2005D0FB3 /* InfoCell.swift in Sources */,
 				08E6F5772794D531005D0FB3 /* IPCConnectionApp.swift in Sources */,
@@ -554,7 +558,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AdNet/Preview Content\"";
 				DEVELOPMENT_TEAM = 9246X952CV;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -577,13 +581,14 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = AdNet/AdNet.entitlements;
+				CODE_SIGN_ENTITLEMENTS = AdNet/AdNetRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Abdulrahman Mufti (9246X952CV)";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AdNet/Preview Content\"";
 				DEVELOPMENT_TEAM = 9246X952CV;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -594,7 +599,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboodmufti.dnsproxy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "DNS Proxy App (Development)";
+				PROVISIONING_PROFILE_SPECIFIER = "DNS Proxy App (Distribution)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -608,7 +613,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9246X952CV;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DNSProviderExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DNSProviderExtension;
@@ -634,10 +639,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = DNSProviderExtension/DNSProviderExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Developer ID Application: Abdulrahman Mufti (9246X952CV)";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9246X952CV;
-				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DNSProviderExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = DNSProviderExtension;
@@ -652,7 +658,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.aboodmufti.dnsproxy.extension;
 				PRODUCT_NAME = "$(inherited)";
-				PROVISIONING_PROFILE_SPECIFIER = "DNS Proxy Extension (Development)";
+				PROVISIONING_PROFILE_SPECIFIER = "DNS Proxy Extension (Distribution)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

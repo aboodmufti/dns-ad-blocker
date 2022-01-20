@@ -3,11 +3,7 @@ import Foundation
 enum StoreKey: String {
   case numberOfRequestsBlocked
   case selectedBlockLists
+  case isFirstLaunch
 }
 
 
-extension UserDefaults {
-  func incrementInteger(_ key:String) {
-    set(integer(forKey: key)+1, forKey: key)
-  }
-}

@@ -13,7 +13,7 @@ class MainViewModel: ObservableObject {
   @Published var isProxyEnabled: Bool = false {
     didSet {
       if isProxyEnabled {
-        requestsBlocked = UserDefaults.standard.integer(forKey: StoreKey.numberOfRequestsBlocked.rawValue)
+        requestsBlocked = Store.shared.integer(.numberOfRequestsBlocked)
         registerWithProvider()
       }
     }
@@ -22,7 +22,7 @@ class MainViewModel: ObservableObject {
   init() {
     manager = DNSProxyManager()
     manager.delegate = self
-    requestsBlocked = UserDefaults.standard.integer(forKey: StoreKey.numberOfRequestsBlocked.rawValue)
+    requestsBlocked = Store.shared.integer(.numberOfRequestsBlocked)
   }
 
   func toggleProxy() {
@@ -74,16 +74,14 @@ extension MainViewModel: DNSProxyManagerDelegate {
 
 extension MainViewModel: AppCommunication {
   func dnsProxyBlockedRequest() {
-    log.info("dnsProxyBlockedRequest")
-    UserDefaults.standard.incrementInteger(StoreKey.numberOfRequestsBlocked.rawValue)
+    Store.shared.incrementInteger(.numberOfRequestsBlocked)
     DispatchQueue.main.async {
       self.requestsBlocked += 1
     }
   }
 
   func getBlockLists(_ completion: @escaping ([String]) -> Void) {
-    log.info("getBlockLists")
-    let lists = UserDefaults.standard.dictionary(forKey: StoreKey.selectedBlockLists.rawValue) as? [String: Bool] ?? [:]
+    let lists = Store.shared.dictionary(.selectedBlockLists) ?? [:]
 
     let urls: [String] = lists.compactMap { k,v in
       guard v else { return nil }

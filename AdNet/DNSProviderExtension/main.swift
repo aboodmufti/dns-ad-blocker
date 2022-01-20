@@ -3,7 +3,7 @@ import NetworkExtension
 
 autoreleasepool {
   NEProvider.startSystemExtensionMode()
-  log = ExtensionLogger(.debug)
+  log = NOOPLogger()
   IPCConnection.shared.startListener()
 }
 
